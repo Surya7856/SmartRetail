@@ -1,0 +1,115 @@
+Initializing database...
+Starting Ray...
+2025-04-02 15:37:47,249 INFO worker.py:1843 -- Started a local Ray instance. View the dashboard at http://127.0.0.1:8265 
+Creating agents...
+Starting enhanced simulation for 3 days with 5 products
+
+=== Day 1 (2025-04-02) ===
+Performing price optimization...
+
+Processing Store 1
+Product 1001: Stock=45, Predicted demand=[3, 2, 7], Sentiment=0.31, Recommended order=0
+Product 1002: Stock=67, Predicted demand=[3, 10, 8], Sentiment=0.45, Recommended order=0
+  Updating price from $39.99 to $38.99
+Product 1003: Stock=23, Predicted demand=[20, 99, 36], Sentiment=0.04, Recommended order=0
+Product 1004: Stock=89, Predicted demand=[3, 15, 12], Sentiment=0.44, Recommended order=0
+  Updating price from $73.99 to $74.99
+Product 1005: Stock=68, Predicted demand=[3, 1, 4], Sentiment=0.03, Recommended order=0
+  Updating price from $32.99 to $31.99
+
+Processing Store 2
+Product 1001: Stock=48, Predicted demand=[3, 1, 7], Sentiment=0.31, Recommended order=0
+Product 1002: Stock=41, Predicted demand=[1, 40, 4], Sentiment=0.45, Recommended order=0
+  Updating price from $38.99 to $39.99
+Product 1003: Stock=169, Predicted demand=[7, 2, 3], Sentiment=0.04, Recommended order=0
+  Updating price from $20.99 to $19.99
+Product 1004: Stock=65, Predicted demand=[3, 9, 12], Sentiment=0.44, Recommended order=0
+  Updating price from $74.99 to $73.99
+Product 1005: Stock=21, Predicted demand=[3, 3, 4], Sentiment=0.03, Recommended order=0
+
+Warehouse processed 0 restock requests
+
+Generating daily report...
+  Daily KPIs: Sales=100, Fill Rate=92.0%, Stockouts=1
+
+Simulating day passing...
+
+=== Day 2 (2025-04-03) ===
+
+Processing Store 1
+Product 1001: Stock=45, Predicted demand=[8, 5, 10], Sentiment=0.31, Recommended order=0
+Product 1002: Stock=67, Predicted demand=[7, 8, 10], Sentiment=0.45, Recommended order=0
+Product 1003: Stock=23, Predicted demand=[19, 99, 36], Sentiment=0.04, Recommended order=0
+Product 1004: Stock=89, Predicted demand=[73, 99, 82], Sentiment=0.44, Recommended order=0
+Product 1005: Stock=68, Predicted demand=[3, 7, 47], Sentiment=0.03, Recommended order=0
+
+Processing Store 2
+Product 1001: Stock=48, Predicted demand=[1, 3, 2], Sentiment=0.31, Recommended order=0
+Product 1002: Stock=41, Predicted demand=[3, 7, 1], Sentiment=0.45, Recommended order=0
+Product 1003: Stock=169, Predicted demand=[3, 7, 2], Sentiment=0.04, Recommended order=0
+Product 1004: Stock=65, Predicted demand=[3, 73, 99], Sentiment=0.44, Recommended order=0
+Product 1005: Stock=21, Predicted demand=[7, 7, 1], Sentiment=0.03, Recommended order=0
+
+Warehouse processed 0 restock requests
+
+Generating daily report...
+  Daily KPIs: Sales=144, Fill Rate=98.0%, Stockouts=2
+
+Simulating day passing...
+
+=== Day 3 (2025-04-04) ===
+
+Processing Store 1
+Product 1001: Stock=45, Predicted demand=[5, 7, 4], Sentiment=0.31, Recommended order=0
+Product 1002: Stock=67, Predicted demand=[3, 8, 10], Sentiment=0.45, Recommended order=0
+Product 1003: Stock=23, Predicted demand=[3, 19, 99], Sentiment=0.04, Recommended order=0
+Product 1004: Stock=89, Predicted demand=[3, 12, 15], Sentiment=0.44, Recommended order=0
+Product 1005: Stock=68, Predicted demand=[3, 7, 4], Sentiment=0.03, Recommended order=0
+
+Processing Store 2
+Product 1001: Stock=48, Predicted demand=[3, 3, 4], Sentiment=0.31, Recommended order=0
+Product 1002: Stock=41, Predicted demand=[3, 7, 6], Sentiment=0.45, Recommended order=0
+Product 1003: Stock=169, Predicted demand=[7, 2, 3], Sentiment=0.04, Recommended order=0
+Product 1004: Stock=65, Predicted demand=[3, 12, 9], Sentiment=0.44, Recommended order=0
+Product 1005: Stock=21, Predicted demand=[3, 7, 1], Sentiment=0.03, Recommended order=0
+
+Warehouse processed 0 restock requests
+
+Generating daily report...
+  Daily KPIs: Sales=109, Fill Rate=99.0%, Stockouts=2
+
+Generating final dashboard data...
+Simulation results saved to simulation_results/ directory with timestamp 20250402_154033
+
+Simulating day passing...
+
+Generating final simulation report...
+
+==================================================
+SIMULATION SUMMARY
+==================================================
+
+KPI TRENDS:
+  Sales Trend: [100, 144, 109]
+  Fill Rate Trend (%): ['92.0', '98.0', '99.0']
+  Stockout Trend: [1, 2, 2]
+
+PRICE OPTIMIZATION SUMMARY:
+  Total Price Changes: 6
+  Price Increases: 2
+  Price Decreases: 4
+  Average Change: -1.29%
+
+FINAL KPIs:
+  Total Units Sold: 353
+  Average Inventory Level: 451.00
+  Fill Rate: 96.33%
+  Inventory Turnover: 4.30
+  Stockout Count: 5
+
+KEY RECOMMENDATIONS:
+  1. [High] Low Fill Rate: Increase safety stock levels or improve demand forecasting to prevent stockouts.
+  2. [Medium] Low Inventory Turnover: Reduce overall inventory levels for slow-moving products to improve capital efficiency.
+
+==================================================
+Shutting down Ray...
